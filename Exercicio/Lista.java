@@ -4,7 +4,7 @@ import java.util.List;
 public class Lista{
     // variáveis de instância
     private Node inicio, fim;
-     private List<Integer> numeros = new ArrayList<>();
+   
     /**
      * Construtor para objetos da classe Lista
      */
@@ -147,13 +147,13 @@ public class Lista{
         if(inicio==null){
             inicio = new Node(x);
             fim = inicio;
-            numeros.add(0 , fim.getX());
+         
         }
         else{
             Node novo = new Node(x);
             novo.setProx(inicio);
              inicio = novo;
-             numeros.add(0 ,inicio.getX());
+           
            
         }
 
@@ -164,7 +164,7 @@ public class Lista{
         Node aux = inicio;
         if(aux !=null ){
             inicio = inicio.getProx();
-             numeros.remove(0);
+             
             return aux.getX();
         }
         else{
@@ -208,12 +208,7 @@ public class Lista{
         
     }
 
-    public void showList(){
-        for (Integer numero : numeros) {
-             System.out.println(numero);
-
-        }
-    }
+  
 }
 
 
